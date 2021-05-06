@@ -1,0 +1,6 @@
+*.cmake
+*.db
+Code/Build/Engine/*.c
+*Makefile*
+Code/Build/Output
+*CMakeCache*

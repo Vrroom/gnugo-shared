@@ -263,7 +263,6 @@ ADD_CUSTOM_COMMAND(
 SET(GG_BUILT_SOURCES ${GG_BUILT_SOURCES}
     ${CMAKE_CURRENT_BINARY_DIR}/mcpat.c)
 
-MESSAGE(${EngineSources})
 # Build products
 ADD_LIBRARY(Engine SHARED ${EngineSources} ${GG_BUILT_SOURCES})
 
