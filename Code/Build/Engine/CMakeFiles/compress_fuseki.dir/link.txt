@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -O2 -g -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/compress_fuseki.dir/Users/amaltaas/gnugo-3.8/Code/Source/Engine/compress_fuseki.c.o  -o ../Output/bin/compress_fuseki   -L/Users/amaltaas/gnugo-3.8/Code/Build/Output/lib 
