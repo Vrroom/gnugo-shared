@@ -302,8 +302,6 @@ static int string_mark;
 
 /* Forward declarations. */
 static void really_do_trymove(int pos, int color);
-static int do_trymove(int pos, int color, int ignore_ko);
-static void undo_trymove(void);
 
 static int do_approxlib(int pos, int color, int maxlib, int *libs);
 static int slow_approxlib(int pos, int color, int maxlib, int *libs);
@@ -513,7 +511,7 @@ trymove(int pos, int color, const char *message, int str)
   if (sgf_dumptree) {
     char buf[100];
 
-    if (message == NULL)
+    if (message == NULL) 
       message = "UNKNOWN";
 
     if (pos == NO_MOVE) {
@@ -650,7 +648,7 @@ really_do_trymove(int pos, int color)
  * Return 1 if the move was valid, otherwise 0.
  */
 
-static int 
+int 
 do_trymove(int pos, int color, int ignore_ko)
 {
   /* 1. The color must be BLACK or WHITE. */
@@ -756,7 +754,7 @@ popgo()
  * through trymove() or tryko().
  */
 
-static void
+void
 undo_trymove()
 {
   gg_assert(change_stack_pointer - change_stack <= STACK_SIZE);

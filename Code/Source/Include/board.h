@@ -267,6 +267,7 @@ void setup_board(Intersection new_board[MAX_BOARD][MAX_BOARD], int ko_pos,
 void add_stone(int pos, int color);
 void remove_stone(int pos);
 void play_move(int pos, int color);
+void undo_trymove (void);
 int undo_move(int n);
 
 void store_board(struct board_state *state);
@@ -279,6 +280,7 @@ int get_last_opponent_move(int color);
 int stones_on_board(int color);
 
 /* Functions handling the variable board state. */
+int do_trymove(int pos, int color, int ignore_ko);
 int trymove(int pos, int color, const char *message, int str);
 int tryko(int pos, int color, const char *message);
 void popgo(void);
